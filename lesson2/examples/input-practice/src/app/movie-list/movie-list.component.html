@@ -1,8 +1,10 @@
 <div class='movies col-4'>
-    <h3>Movies to Watch</h3>
-    <ol>
-       <li *ngFor ="let movie of movies">{{movie}}</li>
-    </ol>
-    <hr>
-
- </div>
+   <h3>Movies to Watch</h3>
+   <ol>
+      <li *ngFor ="let movie of movies">{{movie}}</li>
+   </ol>
+   <hr>
+   <input #newMovie (keyup.enter)='addMovie(newMovie.value); newMovie.value = ""' type='text' placeholder="Enter Movie Title Here" required/>
+   <button (click)='addMovie(newMovie.value); newMovie.value = ""' required>Add</button>
+   <p *ngIf="!addMovie(newMovie.value)">Please submit a movie that is not on th list</p>
+</div>
