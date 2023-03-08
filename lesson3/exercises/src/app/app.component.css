@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.col-6{
+    width: auto;
+}
+
 .container-header {
     text-align: center;
 }
